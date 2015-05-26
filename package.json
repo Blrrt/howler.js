@@ -20,10 +20,5 @@
   "license": {
     "type": "MIT",
     "url": "https://raw.githubusercontent.com/goldfire/howler.js/master/LICENSE.md"
-  },
-  "files": [
-    "howler.js",
-    "howler.min.js",
-    "LICENSE.md"
-  ]
+  }
 }
