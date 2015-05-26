@@ -1601,7 +1601,11 @@
    */
   function setupAudioContext() {
     try {
-      if (typeof AudioContext !== 'undefined') {
+      if (window.cordova && /iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+        // disable webAudio in cordova iOS apps
+        // because it breaks the Media plugin
+        usingWebAudio = false;
+      } else if (typeof AudioContext !== 'undefined') {
         ctx = new AudioContext();
       } else if (typeof webkitAudioContext !== 'undefined') {
         ctx = new webkitAudioContext();
